@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "noEmit": false,  // Allow emitting of output files
+      "outDir": "dist",  // Ensure output files go to the 'dist' directory
+      "rootDir": "src",  // Set the root directory to 'src'
+      "declaration": true,  // Generate .d.ts files
+      "sourceMap": true,  // Generate source maps
+      "inlineSources": true,  // Include source files in the source map
+      "resolveJsonModule": true  // Allow importing JSON modules
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "**/*.test.ts"]
+  }

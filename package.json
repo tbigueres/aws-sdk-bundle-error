@@ -1,0 +1,56 @@
+{
+  "name": "medplum-demo-bots",
+  "version": "3.1.5",
+  "description": "Medplum Demo Bots",
+  "license": "Apache-2.0",
+  "author": "Medplum <hello@medplum.com>",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && tsc && node --no-warnings esbuild-script.mjs",
+    "clean": "rimraf dist",
+    "lint": "eslint src/",
+    "prettier": "prettier --write .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "extends": [
+      "@medplum/eslint-config"
+    ],
+    "root": true
+  },
+  "devDependencies": {
+    "@aws-sdk/client-lambda": "^3.598.0",
+    "@aws-sdk/client-s3": "^3.598.0",
+    "@aws-sdk/credential-provider-http": "^3.598.0",
+    "@aws-sdk/credential-provider-ini": "^3.598.0",
+    "@aws-sdk/credential-provider-web-identity": "^3.598.0",
+    "@aws-sdk/s3-request-presigner": "^3.598.0",
+    "@smithy/middleware-endpoint": "^3.0.3",
+    "@smithy/node-http-handler": "^3.1.0",
+    "@types/node": "20.14.6",
+    "@types/node-fetch": "2.6.11",
+    "@types/ssh2-sftp-client": "9.0.3",
+    "@vitest/coverage-v8": "1.6.0",
+    "@vitest/ui": "1.6.0",
+    "aws-sdk": "^2.1645.0",
+    "esbuild": "0.21.5",
+    "globals": "^15.6.0",
+    "rimraf": "5.0.7",
+    "typescript": "5.4.5",
+    "typescript-eslint": "^7.14.1",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "glob": "^10.4.2"
+  }
+}
